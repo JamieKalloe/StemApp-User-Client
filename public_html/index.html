@@ -32,6 +32,7 @@ and open the template in the editor.
         <script src="app/controllers/DashboardController.js"></script>
         <script src="app/controllers/SchoolController.js"></script>
         <script src="app/controllers/VragenlijstController.js"></script>
+        <script src="app/controllers/AccountRequestController.js"></script>
      </head>
     
     <body ng-controller="MainController">
@@ -58,8 +59,9 @@ and open the template in the editor.
                 <ul class="list-group">
                     <li class="list-group-item btn-default" ng-click="goToDashBoard()">Home</li>
                     <li class="list-group-item btn-default" ng-click="goToSchool()">Schools and regions</li> 
-                    <li class="list-group-item btn-default" ng-click="goToQuestionaires()">Questionaires</li> 
-                    <li class="list-group-item btn-default" ng-click="goToQuestionaires()">Instellingen</li> 
+                    <li class="list-group-item btn-default" ng-click="goToQuestionaires()">Questionaires</li>
+                    <li class="list-group-item btn-default" ng-click="goToAccountRequests()">Account requests</li> 
+                    <li class="list-group-item btn-default" ng-click="goToQuestionaires()">Settings</li> 
                 </ul>
             </article>
             <article class="flex-view" ng-view></article>

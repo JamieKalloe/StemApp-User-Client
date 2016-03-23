@@ -12,6 +12,15 @@ and open the template in the editor.
     display: flex;
 }
 
+.flex-container-scroll {
+    display: flex;
+    overflow: auto;
+}
+
 .flex-view {
     flex-grow: 1;
+}
+
+.customCell {
+    vertical-align: middle !important;
 }

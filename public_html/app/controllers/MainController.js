@@ -16,4 +16,8 @@ StemApp.controller('MainController', function($scope, $location) {
      $scope.goToQuestionaires = function() {
         $location.path('/questionaires');
     };
+    
+    $scope.goToAccountRequests = function() {
+        $location.path('/accountrequests');
+    };
 });

@@ -15,5 +15,9 @@ StemApp.config(function($routeProvider, $sceDelegateProvider) {
             .when('/questionaires', {
                 templateUrl : 'assets/partials/vragenlijsten.html',
                 controller  : 'VragenlijstController'
+            })
+            .when('/accountrequests', {
+                templateUrl:'assets/partials/accountRequests.html',
+                controller:'AccountRequestController'
             });
 });
