@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="StemApp">
+    <head>
+        <title>TODO supply a title</title>        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!--css-->     
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/container.css">
+        <link rel="stylesheet" href="assets/css/sidebar.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+        
+        <!--javascript-->
+        <script src="assets/libraries/angular.min.js"></script>
+        <script src="assets/libraries/angular-route.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        
+        
+        <!-- Modules -->
+        <script src="app/module.js"></script>
+        <script src="app/routes.js"></script>
+    
+        <!--controllers-->
+        <script src="app/controllers/MainController.js"></script>
+        <script src="app/controllers/DashboardController.js"></script>
+        <script src="app/controllers/SchoolController.js"></script>
+        <script src="app/controllers/VragenlijstController.js"></script>
+     </head>
+    
+    <body ng-controller="MainController">
+               
+        <nav class="navbar navbar-inverse container-fluid">
+            <section class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+            </section>
+            
+            <ul class="nav navbar-nav">
+             
+            </ul>
+    
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Log uit</a></li>
+            </ul>
+        </nav>
+        
+        
+        <section class="flex-container">
+            <article class="sidebar">
+                
+                <ul class="list-group">
+                    <li class="list-group-item btn-default" ng-click="goToDashBoard()">Home</li>
+                    <li class="list-group-item btn-default" ng-click="goToSchool()">Schools and regions</li> 
+                    <li class="list-group-item btn-default" ng-click="goToQuestionaires()">Questionaires</li> 
+                    <li class="list-group-item btn-default" ng-click="goToQuestionaires()">Instellingen</li> 
+                </ul>
+            </article>
+            <article class="flex-view" ng-view></article>
+        </section>
+        
+        
+        
+       
+    </body>
+</html>
