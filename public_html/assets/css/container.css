@@ -21,6 +21,10 @@ and open the template in the editor.
     flex-grow: 1;
 }
 
-.customCell {
-    vertical-align: middle !important;
+.btn-accept {
+    margin-right: 5px;
+}
+
+.btn-deny {
+        margin-left: 5px;
 }
