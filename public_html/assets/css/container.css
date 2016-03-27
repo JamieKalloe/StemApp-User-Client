@@ -12,6 +12,7 @@ and open the template in the editor.
     display: flex;
 }
 
+
 .flex-container-scroll {
     display: flex;
     overflow: auto;
@@ -23,8 +24,4 @@ and open the template in the editor.
 
 .btn-accept {
     margin-right: 5px;
-}
-
-.btn-deny {
-        margin-left: 5px;
 }

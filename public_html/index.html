@@ -11,11 +11,16 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
         <!--css-->     
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/container.css">
-        <link rel="stylesheet" href="assets/css/sidebar.css">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/components.css">
 
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/sidebar.css">
+        <link href='//fonts.googleapis.com/css?family=RobotoDraft:regular,bold,italic,thin,light,bolditalic,black,medium&lang=en' rel='stylesheet'>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
         
         <!--javascript-->
         <script src="assets/libraries/angular.min.js"></script>
@@ -32,26 +37,33 @@ and open the template in the editor.
         <script src="app/controllers/DashboardController.js"></script>
         <script src="app/controllers/SchoolController.js"></script>
         <script src="app/controllers/VragenlijstController.js"></script>
+        <script src="app/controllers/VragenController.js"></script>
         <script src="app/controllers/AccountRequestController.js"></script>
      </head>
     
     <body ng-controller="MainController">
                
-        <nav class="navbar navbar-inverse container-fluid">
-            <section class="navbar-header">
-                    <a class="navbar-brand" href="#">WebSiteName</a>
-            </section>
-            
-            <ul class="nav navbar-nav">
-             
-            </ul>
-    
-            <ul class="nav navbar-nav navbar-right">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand">WebSiteName</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                   
+                </ul>
+              <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Log uit</a></li>
-            </ul>
-        </nav>
-        
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>
+            </div>
+        </div>
+</nav>
         
         <section class="flex-container">
             <article class="sidebar">

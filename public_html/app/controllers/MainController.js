@@ -13,8 +13,12 @@ StemApp.controller('MainController', function($scope, $location) {
         $location.path('/schools');
     };
     
-     $scope.goToQuestionaires = function() {
-        $location.path('/questionaires');
+    $scope.goToQuestionaires = function() {
+       $location.path('/questionaires');
+    };
+    
+    $scope.goToQuestionaire = function() {
+        $location.path('/questionaires/nr');
     };
     
     $scope.goToAccountRequests = function() {
