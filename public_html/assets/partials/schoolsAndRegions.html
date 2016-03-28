@@ -10,14 +10,18 @@
                                     </div>
 
                                     <div class="form-inline form-group">
-                                        <input type="text" placeholder="Enter a new region name" class="form-control">
-                                        <button type="submit" ng-click="showAlert()" class="btn btn-default">Submit</button>
+                                        <input type="text" placeholder="Enter a new region name" ng-model="regionToAdd" class="form-control">
+                                        <button type="submit" ng-click="add(regionToAdd)" class="btn btn-default">Submit</button>
                                     </div>
                                 </form>
                         </article>
                     
                         <article class="panel-body">
-                                <ul id="regionList" class="list-group"></ul> 
+                            <ul id="regionList" class="list-group">
+                                <li class="list-group-item" ng-repeat="regio in schoolRegions track by $index">
+                                    {{regio}}
+                                </li>
+                            </ul> 
                         </article>
                 </section>
             </article>
@@ -28,24 +32,43 @@
                                 <h1>Schools</h1>
                                 <form class="form" role="form">
                                     <div class="form-group">
-                                        <input type="search" class="form-control" id="searchSchool" placeholder="Search schools">
+                                        <input type="search" class="form-control" id="searchSchool" ng-model="schoolPattern" placeholder="Search schools">
                                     </div>
                         
                                     <div class="form-inline form-group">
-                                        <input type="text" placeholder="Enter a new school name" class="form-control">
-                                        <button type="submit" class="btn btn-default">Submit</button>
+                                        <input type="text" placeholder="Enter a new school name" class="form-control" ng-model="schoolToAdd">
+                                        <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#addSchoolModal">Submit</button>
                                     </div>
                                 </form>
                         </article>
                 
                         <article class="panel-body">
-                               <ul id="schoolList" class="list-group"></ul> 
+                            <ul id="schoolList" class="list-group">
+                                <li class="list-group-item" ng-repeat="school in schools track by $index">
+                                    {{school}}
+                                </li>
+                            </ul> 
                         </article>
                     </section>
         </article>
     
-    {{createTestSchools()}}
-    {{createTestRegions()}}
+    <div id="addSchoolModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <article class="modal-content">
+                <section class="modal-header">
+                    <h4 class="modal-title">Select a region for <span class="label label-default">{{schoolToAdd}}</span></h4>
+                </section>
+                
+                <section class="modal-body">
+                    <select class="form-control" ng-model="slectedSchoolRegion" ng-options='region for region in schoolRegions'></select>
+                </section>
+                
+                <section class="modal-footer">
+                    <button type="button" ng-click="addSchool(schoolToAdd)" class="btn btn-default" data-dismiss="modal">Add</button>
+                </section>
+            </article>
+        </div>
+    </div>
         </section>
 
 

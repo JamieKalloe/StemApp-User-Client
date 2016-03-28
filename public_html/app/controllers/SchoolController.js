@@ -1,35 +1,24 @@
 StemApp.controller('SchoolController', function($scope) {
+    
+    $scope.schoolRegions = [
+        'Noord-Holland',
+        'Zuid-Holland',
+        'Noord-Brabant'
+    ];
         
-    $scope.createTestSchools = function() {
-        
-        var schools = document.getElementById('schoolList');
-        schools.innerHTML = '';
-        
-        for(var i = 0; i < 30; i++) {
-            var li = document.createElement('li');
-            li.setAttribute("class", "list-group-item");
-            li.innerHTML = "School item " + i;
-            schools.appendChild(li);
-        }
+    $scope.schools = [
+        'Herbert Vissers College',
+        'Hogeschool Leiden',
+        'De Ark'
+    ];
+    
+    //Later replace with db call
+    $scope.add = function(name) {
+      this.schoolRegions.push(name);  
     };
     
-     $scope.createTestRegions = function() {
-        var regions = document.getElementById('regionList');
-        regions.innerHTML = '';
-        
-        for(var i = 0; i < 30; i++) {
-
-            var li = document.createElement('li');
-            li.setAttribute("class", "list-group-item");
-            li.innerHTML = "Region item" + i;
-            regions.appendChild(li);
-        }
+    //Later replace school with school obj and db
+    $scope.addSchool = function(name) {
+        this.schools.push(name);
     };
-    
-    
-    $scope.showAlert = function() {
-      alert("this is alert");  
-    };
-    
-    
 });
