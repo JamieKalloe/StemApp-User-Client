@@ -3,16 +3,26 @@
         <article class="panel panel-default">
             <section class="panel-heading clearfix">
                 <h1>Questionaires</h1>
-                <button class="fab pull-right" ng-click="goToQuestionaire()"><i class="material-icons">add</i></button>
+                <div> 
+                    <label for="regionListQuestionaire">Filter by region</label>
+                    <select id="regionListQuestionaire" class="form-control" ng-model='regionFilter' ng-options='region for region in regionFilters'></select>
+                    
+                     <label for="categoryListQuestionaire">Filter by category</label>
+                    <select id="categoryListQuestionaire" class="form-control" ng-model='categoryFilter' ng-options='category for category in categoryFilters'></select>
+                     
+                    <label for="activeListQuestionaire">Filter by state</label>
+                    <select id="activeListQuestionaire" class="form-control" ng-model='stateFilter' ng-options='state for state in stateFilters'></select>
+                </div>
             </section>
             <section class="panel-body">
                 <ul class="list-group" ng-repeat="questionaire in questionaires">                  
-                    <li class="list-group-item" ng-click="showAlert2(questionaire.id)()">
+                    <li class="list-group-item">
                                 <section class="row" style="text-align: center">
-                                   <article class="col-sm-3"><h4>{{questionaire.name}}</h4> </article>
-                                   <article class="col-sm-3"><h4><span class="label label-default">{{questionaire.region}}</span></h4></article>
-                                   <article class="col-sm-3"> <h4><span class="label label-default">{{questionaire.category}}</span></h4></article>
-                                   <article class="col-sm-3"> {{questionaire.active}}</article>
+                                    <article class="col-sm-3"><h4>{{questionaire.name}}</h4> </article>
+                                    <article class="col-sm-3"><h4><span class="label label-default">{{questionaire.region}}</span></h4></article>
+                                    <article class="col-sm-3"><h4><span class="label label-default">{{questionaire.category}}</span></h4></article>
+                                    <article class="col-sm-2"> {{questionaire.active}}</article>
+                                    <article class="col-sm-1"> <button class="btn btn-default btn-block" ng-click="remove(questionaire.id)"><span class="material-icons">delete</span></button></article>
                                 </section>
                         </li>
                 </ul>
@@ -20,5 +30,6 @@
             </section>
         </article>
     </section>
-        
+                        <button class="fab fab-absolute" ng-click="goToQuestionaire()"><i class="material-icons">add</i></button>
+
 </body>

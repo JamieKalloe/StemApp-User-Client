@@ -2,7 +2,7 @@ StemApp.controller('VragenController', function($scope) {
     $scope.layouts = []; //Per vraag titel en vraagstelling vasthouden
     $scope.numberOfLayouts = 1; //Wordt gebruikt voor het kijken of er toegevoegd of verwijdert moet worden
     
-    // models for selection boxes 
+    // models voor selection boxes 
     // Komt later van een database
     $scope.regions = [
         "Noord-Holland",
