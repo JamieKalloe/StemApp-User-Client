@@ -1,6 +1,6 @@
 StemApp.controller('SchoolController', function($scope, RegioService, SchoolService) {
 
-    var construct = function()
+    $scope.construct = function()
     {
         RegioService.getAll(function(regios)
         {
@@ -26,5 +26,5 @@ StemApp.controller('SchoolController', function($scope, RegioService, SchoolServ
         this.schoolRegions.splice(id, 1);
     };
     
-    this.construct();
+    $scope.construct();
 });
