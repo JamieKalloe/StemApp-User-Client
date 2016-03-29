@@ -39,7 +39,7 @@ StemApp.controller('VragenlijstController', function($scope) {
         {
             id:132434344,
             name:'Name of an questionaire',
-            region:'Noor-holland',
+            region:'Noord-holland',
             category:'gemeenteraad',
             active:true
         },
