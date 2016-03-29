@@ -3,23 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/services/VragenService.js</file>
-            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/assets/partials/schoolsAndRegions.html</file>
-            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/controllers/VragenlijstController.js</file>
-            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/services/AccountRequestService.js</file>
-            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/routes.js</file>
-            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/controllers/MainController.js</file>
-            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/services/VragenlijstService.js</file>
-            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/services/RegioService.js</file>
-            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/assets/partials/vragenlijst.html</file>
             <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/controllers/SchoolController.js</file>
-            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/assets/css/container.css</file>
-            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/assets/partials/vragenlijsten.html</file>
+            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/assets/partials/schoolsAndRegions.html</file>
+            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/controllers/AccountRequestController.js</file>
             <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/services/SchoolService.js</file>
             <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/index.html</file>
-            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/controllers/VragenController.js</file>
-            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/assets/css/components.css</file>
-            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/services/DocentService.js</file>
+            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/controllers/DashboardController.js</file>
+            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/services/RegioService.js</file>
         </group>
     </open-files>
 </project-private>

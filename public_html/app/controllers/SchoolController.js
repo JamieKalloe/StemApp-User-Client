@@ -1,16 +1,17 @@
-StemApp.controller('SchoolController', function($scope) {
+StemApp.controller('SchoolController', function($scope, SchoolService) {
     
+    //Constructor in js
+    this.construct = function() {
+        $scope.refresh();
+    };
+        
     $scope.schoolRegions = [
         'Noord-Holland',
         'Zuid-Holland',
         'Noord-Brabant'
     ];
         
-    $scope.schools = [
-        'Herbert Vissers College',
-        'Hogeschool Leiden',
-        'De Ark'
-    ];
+    $scope.schools = [];
     
     //Later replace with db call
     $scope.add = function(name) {
@@ -21,4 +22,18 @@ StemApp.controller('SchoolController', function($scope) {
     $scope.addSchool = function(name) {
         this.schools.push(name);
     };
+    
+    $scope.refresh = function() {
+        SchoolService.getAll(function (schools) {
+            $scope.schools = schools;
+        });
+    };
+    
+    $scope.removeRegion = function(id) {
+        this.schoolRegions.splice(id, 1)
+    };
+    
+    this.construct();
+
+
 });

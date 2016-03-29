@@ -18,8 +18,8 @@
                     
                         <article class="panel-body">
                             <ul id="regionList" class="list-group">
-                                <li class="list-group-item" ng-repeat="regio in schoolRegions track by $index">
-                                    {{regio}}
+                                <li class="list-group-item clearfix" ng-repeat="regio in schoolRegions track by $index">
+                                    {{regio}}<span><button class="btn btn-default pull-right" ng-click="removeRegion($index)">{{$index}}</button></span>
                                 </li>
                             </ul> 
                         </article>
@@ -45,7 +45,7 @@
                         <article class="panel-body">
                             <ul id="schoolList" class="list-group">
                                 <li class="list-group-item" ng-repeat="school in schools track by $index">
-                                    {{school}}
+                                    {{school.name}}
                                 </li>
                             </ul> 
                         </article>
