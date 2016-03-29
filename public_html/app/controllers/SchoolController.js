@@ -12,7 +12,7 @@ StemApp.controller('SchoolController', function($scope, RegioService, SchoolServ
         });
     };
             
-    //Later replace with db call.
+    //Later replace with db call..
     $scope.add = function(name) {
       this.schoolRegions.push(name);  
     };
