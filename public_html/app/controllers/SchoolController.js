@@ -1,10 +1,20 @@
-StemApp.controller('SchoolController', function($scope) {
+StemApp.controller('SchoolController', function($scope, RegioService) {
     
-    $scope.schoolRegions = [
-        'Noord-Holland',
-        'Zuid-Holland',
-        'Noord-Brabant'
-    ];
+//    $scope.schoolRegions = [
+//        'Noord-Holland',
+//        'Zuid-Holland',
+//        'Noord-Brabant'
+//    ];
+
+    var construct = function()
+    {
+        RegioService.getAll(function(regios)
+        {
+            $scope.schoolRegions = regios;
+        });
+    };
+
+   	construct();
         
     $scope.schools = [
         'Herbert Vissers College',

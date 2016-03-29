@@ -4,4 +4,17 @@
  * and open the template in the editor.
  */
 
-
+StemApp.service('RegioService', function($http)
+{
+    var self = this;
+    
+    self.getAll = function(onReceived)
+    {
+        var uri = 'http://localhost:8080/api/regios';
+        
+        $http.get(uri).success(onReceived).error(function(message, status)
+        {
+            alert('Ophalen mislukt: ' + message);
+        });
+    };
+});
