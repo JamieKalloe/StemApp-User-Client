@@ -8,6 +8,20 @@ StemApp.service('RegioService', function($http)
 {
     var self = this;
     
+      this.create = function (name, onCreated)
+    {
+        var uri = 'http://localhost:8080/api/regios';
+        var data =
+                {
+                    name: name
+                };
+
+        $http.post(uri, data).success(onCreated).error(function (message, status)
+        {
+            alert('Regio aanmaken mislukt: ' + message);
+        });
+    };
+    
     self.getAll = function(onReceived)
     {
         var uri = 'http://localhost:8080/api/regios';
