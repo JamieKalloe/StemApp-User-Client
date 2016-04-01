@@ -25,7 +25,7 @@ StemApp.service('SchoolService', function ($http) {
     
     // Welke velden in welke volgorde vereist?
     this.edit = function (schoolId, school_naam, regionId, onCreated) {
-        var uri = 'http://localhost:8080/api/schools';
+        var uri = 'http://localhost:8080/api/schools/' + schoolId;
         var data =
                 {
                    name:school_naam,

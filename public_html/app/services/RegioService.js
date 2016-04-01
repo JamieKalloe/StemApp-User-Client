@@ -8,7 +8,7 @@ StemApp.service('RegioService', function($http)
 {
     var self = this;
     
-      this.create = function (name, onCreated)
+    this.create = function (name, onCreated)
     {
         var uri = 'http://localhost:8080/api/regios';
         var data =
@@ -19,6 +19,21 @@ StemApp.service('RegioService', function($http)
         $http.post(uri, data).success(onCreated).error(function (message, status)
         {
             alert('Regio aanmaken mislukt: ' + message);
+        });
+    };
+    
+     this.edit = function (id, name, onCreated)
+    {
+        var uri = 'http://localhost:8080/api/regios/' + id;
+        var data =
+                {   
+                    id:id,
+                    name: name
+                };
+
+        $http.put(uri, data).success(onCreated).error(function (message, status)
+        {
+            alert('Regio updaten mislukt: ' + message);
         });
     };
     

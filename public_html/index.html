@@ -64,6 +64,11 @@ and open the template in the editor.
                    
                 </ul>
               <ul class="nav navbar-nav navbar-right">
+                  <li><a ng-click="goToDashBoard()">Home</a></li>
+                <li><a ng-click="goToSchool()">Schools and regions</a></li> 
+                <li><a ng-click="goToQuestionaires()">Questionaires </a></li>
+                <li><a ng-click="goToAccountRequests()">Account requests</a></li> 
+                <li><a ng-click="goToQuestionaires()">Settings</a></li> 
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
               </ul>
@@ -72,16 +77,6 @@ and open the template in the editor.
 </nav>
         
         <section class="flex-container">
-            <article class="sidebar">
-                
-                <ul class="list-group">
-                    <li class="list-group-item btn-default" ng-click="goToDashBoard()">Home</li>
-                    <li class="list-group-item btn-default" ng-click="goToSchool()">Schools and regions</li> 
-                    <li class="list-group-item btn-default" ng-click="goToQuestionaires()">Questionaires</li>
-                    <li class="list-group-item btn-default" ng-click="goToAccountRequests()">Account requests</li> 
-                    <li class="list-group-item btn-default" ng-click="goToQuestionaires()">Settings</li> 
-                </ul>
-            </article>
             <article class="flex-view" ng-view></article>
         </section>
         

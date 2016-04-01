@@ -13,25 +13,35 @@ StemApp.controller('SchoolController', function($scope, RegioService, SchoolServ
         });
     };
     
+    $scope.edit = function(id, name) {
+        RegioService.edit(id, name, function() {
+            alert("Region updated");
+        });
+    };
+    
+      $scope.removeRegion = function(id) {
+        this.schoolRegions.splice(id, 1);
+    };
+    
+    
     $scope.addSchool = function(id, name) {
         SchoolService.create(id, name, function(){
             $scope.getAllSchools();
         }); 
     };
     
-    $scope.editSchool = function(regionId, schoolName) {
-        
+    $scope.editSchool = function(schoolId, schoolName, regionId) {
+        //SchoolService.edit(schoolId, schoolName, regionId, function() {
+        //    alert("School updated");
+        //});
+        alert(schoolId + " " + schoolName, regionId);
     };
     
-    $scope.removeRegion = function(id) {
-        this.schoolRegions.splice(id, 1);
-    };
-    
+  
     
     $scope.saveEditIndex = function(index) {
         $scope.indexToBeEdited = index;
     };
-    
     
     
     //Has to go in separate function.
