@@ -10,7 +10,10 @@
             <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/assets/partials/vragenlijsten.html</file>
             <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/index.html</file>
             <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/controllers/DashboardController.js</file>
+            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/controllers/MainController.js</file>
+            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/controllers/VragenController.js</file>
             <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/services/RegioService.js</file>
+            <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/app/services/DocentService.js</file>
             <file>file:/D:/html5_projects/StemAppBeheerPaneel/public_html/assets/partials/vragenlijst.html</file>
         </group>
     </open-files>

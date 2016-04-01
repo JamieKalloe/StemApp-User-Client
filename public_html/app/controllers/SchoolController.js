@@ -31,10 +31,9 @@ StemApp.controller('SchoolController', function($scope, RegioService, SchoolServ
     };
     
     $scope.editSchool = function(schoolId, schoolName, regionId) {
-        //SchoolService.edit(schoolId, schoolName, regionId, function() {
-        //    alert("School updated");
-        //});
-        alert(schoolId + " " + schoolName, regionId);
+        SchoolService.edit(schoolId, schoolName, regionId, function() {
+            alert("School updated");
+        });
     };
     
   
