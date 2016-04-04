@@ -1,0 +1,51 @@
+
+<section class="container-fluid ">
+    <article class="panel-group" >
+                    <section class="panel panel-default">
+                        <article class="panel-heading">
+                                <h1>Categories</h1>
+                                <form class="form" role="form">
+                                    
+                                    <div class="form-inline form-group">
+                                        <input type="text" placeholder="Enter a new category name" ng-model="categoryToAdd" class="form-control">
+                                        <button type="submit" ng-click="add(categoryToAdd)" class="btn btn-default">Submit</button>
+                                    </div>
+                                </form>
+                        </article>
+                    
+                        <article class="panel-body">
+                            <ul id="regionList" class="list-group">
+                                <li class="list-group-item clearfix" ng-repeat="category in categories track by $index">
+                                    {{category.name}}
+                                    <button class="btn btn-default pull-right" ng-click="removeCategory($index)"><span class="material-icons">delete</span></button>
+                                    <button class="btn btn-default pull-right" ng-click="saveEditIndex($index)" data-toggle="modal" data-target="#editCategoryModal"><span class="material-icons">edit</span></button>
+                                </li>
+                            </ul> 
+                        </article>
+                </section>
+            </article>
+            
+    
+
+    <div id="editCategoryModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <article class="modal-content">
+                <section class="modal-header">
+                    <h4 class="modal-title">Enter a new name for the category <span class="label label-default"></span></h4>
+                </section>
+                
+                <section class="modal-body">
+                    <input type="text" class="form-control" ng-model="newName">
+                </section>
+                
+                <section class="modal-footer">
+                    <button type="button" ng-click="edit(categories[indexToBeEdited].id, newName)" class="btn btn-default" data-dismiss="modal">Edit</button>
+                </section>
+            </article>
+        </div>
+    </div>
+        </section>
+
+    
+
+

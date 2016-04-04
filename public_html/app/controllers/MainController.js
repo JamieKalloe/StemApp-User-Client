@@ -24,4 +24,8 @@ StemApp.controller('MainController', function($scope, $location) {
     $scope.goToAccountRequests = function() {
         $location.path('/accountrequests');
     };
+    
+    $scope.goToCategories = function() {
+        $location.path('/categories');
+    };
 });
