@@ -19,7 +19,7 @@
                         <article class="panel-body">
                             <ul id="regionList" class="list-group">
                                 <li class="list-group-item clearfix" ng-repeat="regio in schoolRegions | filter:regionPattern track by $index">
-                                    {{regio.name}}
+                                    <p>{{regio.name}}</p>
                                     <button class="btn btn-default pull-right" ng-click="removeRegion($index)"><span class="material-icons">delete</span></button>
                                     <button class="btn btn-default pull-right" ng-click="saveEditIndex($index)" data-toggle="modal" data-target="#editRegionModal"><span class="material-icons">edit</span></button>
                                 </li>
@@ -83,12 +83,12 @@
                 </section>
                 
                 <section class="modal-body">
-                    <input type="text" class="form-control" placeholder="Enter a new name" ng-model="schools[indexToBeEdited].name">
+                    <input type="text" class="form-control" placeholder="Enter a new name" ng-model="newNameForSchool">
                     <select class="form-control" ng-model="selectedSchoolRegionForEdit" ng-options='region.name for region in schoolRegions'></select>
                 </section>
                 
                 <section class="modal-footer">
-                    <button type="button" ng-click="editSchool(schools[indexToBeEdited].id, schools[indexToBeEdited].name ,selectedSchoolRegionForEdit.id)" class="btn btn-default" data-dismiss="modal">Edit</button>
+                    <button type="button" ng-click="editSchool(schools[indexToBeEdited].id, newNameForSchool, selectedSchoolRegionForEdit)" class="btn btn-default" data-dismiss="modal">Edit</button>
                 </section>
             </article>
         </div>
@@ -103,11 +103,11 @@
                 </section>
                 
                 <section class="modal-body">
-                    <input type="text" class="form-control" ng-model="schoolRegions[indexToBeEdited].name">
+                    <input type="text" class="form-control" ng-model="newNameForRegion">
                 </section>
                 
                 <section class="modal-footer">
-                    <button type="button" ng-click="edit(schoolRegions[indexToBeEdited].id, schoolRegions[indexToBeEdited].name)" class="btn btn-default" data-dismiss="modal">Edit</button>
+                    <button type="button" ng-click="edit(schoolRegions[indexToBeEdited].id, newNameForRegion)" class="btn btn-default" data-dismiss="modal">Edit</button>
                 </section>
             </article>
         </div>

@@ -15,7 +15,7 @@ StemApp.controller('SchoolController', function($scope, RegioService, SchoolServ
     
     $scope.edit = function(id, name) {
         RegioService.edit(id, name, function() {
-            alert("Region updated");
+            $scope.schoolRegions[$scope.indexToBeEdited].name = name;
         });
     };
     
@@ -30,9 +30,11 @@ StemApp.controller('SchoolController', function($scope, RegioService, SchoolServ
         }); 
     };
     
-    $scope.editSchool = function(schoolId, schoolName, regionId) {
-        SchoolService.edit(schoolId, schoolName, regionId, function() {
-            alert("School updated");
+    $scope.editSchool = function(schoolId, schoolName, region) {
+        SchoolService.edit(schoolId, schoolName, region.id, function() {
+            $scope.schools[$scope.indexToBeEdited].name = schoolName;
+            $scope.schools[$scope.indexToBeEdited].regio.name = region.name;
+            $scope.schools[$scope.indexToBeEdited].regio.id = region.id;
         });
     };
     
