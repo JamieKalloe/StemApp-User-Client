@@ -48,7 +48,7 @@
                             <ul id="schoolList" class="list-group">
                                 <li class="list-group-item clearfix" ng-repeat="school in schools | filter:schoolPattern track by $index ">
                                     {{school.name}}
-                                    <button class="btn btn-default pull-right" ng-click="removeRegion($index)"><span class="material-icons">delete</span></button>
+                                    <button class="btn btn-default pull-right" ng-click="removeSchool($index)"><span class="material-icons">delete</span></button>
                                     <button class="btn btn-default pull-right" ng-click="saveEditIndex($index)" data-toggle="modal" data-target="#editSchoolModal"><span class="material-icons">edit</span></button>
                                 </li>
                             </ul> 

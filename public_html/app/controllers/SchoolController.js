@@ -41,7 +41,12 @@ StemApp.controller('SchoolController', function($scope, RegioService, SchoolServ
         });
     };
     
-  
+    $scope.removeSchool = function(id) {
+          SchoolService.delete(this.schools[id].id, function() {
+              $scope.schools.splice(id, 1);
+              alert("School removed");
+          });
+      };
     
     $scope.saveEditIndex = function(index) {
         $scope.indexToBeEdited = index;

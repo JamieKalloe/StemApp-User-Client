@@ -23,6 +23,20 @@ StemApp.service('SchoolService', function ($http) {
         });
     };
     
+    this.delete = function(id, onRemoved)
+    {
+        var uri = 'http://localhost:8080/api/schools/' + id;
+        var data =
+                {
+                    id:id
+                };
+                
+        $http.delete(uri, data).success(onRemoved).error(function (message, status)
+        {
+            alert("School verwijderen mislukt: " + message);
+        });
+    };
+    
     // Welke velden in welke volgorde vereist?
     this.edit = function (schoolId, school_naam, regionId, onCreated) {
         var uri = 'http://localhost:8080/api/schools/' + schoolId;
