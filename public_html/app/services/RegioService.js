@@ -37,6 +37,20 @@ StemApp.service('RegioService', function($http)
         });
     };
     
+    this.delete = function(id, onRemoved)
+    {
+        var uri = 'http://localhost:8080/api/regios/' + id;
+        var data = 
+                {
+                    id:id
+                };
+        
+        $http.delete(uri, data).success(onRemoved).error(function (message, status)
+        {
+           alert("Regio verwijderen mislukt:" + message); 
+        });
+    };
+    
     self.getAll = function(onReceived)
     {
         var uri = 'http://localhost:8080/api/regios';

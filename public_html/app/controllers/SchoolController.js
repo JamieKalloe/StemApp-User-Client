@@ -20,7 +20,10 @@ StemApp.controller('SchoolController', function($scope, RegioService, SchoolServ
     };
     
       $scope.removeRegion = function(id) {
-        this.schoolRegions.splice(id, 1);
+        RegioService.delete(this.schoolRegions[id].id, function() {
+            $scope.schoolRegions.splice(id, 1);
+            alert("Regio removed");
+        });
     };
     
     

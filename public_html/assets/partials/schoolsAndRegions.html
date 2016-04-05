@@ -20,7 +20,7 @@
                             <ul id="regionList" class="list-group">
                                 <li class="list-group-item clearfix" ng-repeat="regio in schoolRegions | filter:regionPattern track by $index">
                                     <p>{{regio.name}}</p>
-                                    <button class="btn btn-default pull-right" ng-click="removeRegion(regio)"><span class="material-icons">delete</span></button>
+                                    <button class="btn btn-default pull-right" ng-click="removeRegion($index)"><span class="material-icons">delete</span></button>
                                     <button class="btn btn-default pull-right" ng-click="saveEditIndex($index)" data-toggle="modal" data-target="#editRegionModal"><span class="material-icons">edit</span></button>
                                 </li>
                             </ul> 
