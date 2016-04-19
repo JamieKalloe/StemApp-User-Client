@@ -3,30 +3,8 @@ StemApp.config(function($routeProvider, $sceDelegateProvider) {
     $routeProvider
             //Route for the dashboard page
             .when('/', {
-                templateUrl:'assets/partials/dashboard.html',
-                controller:'DashboardController'
+                templateUrl:'assets/partials/components.html',
+                controller:'MainController'
             })
-            //Route for about page
-              .when('/schools', {
-                templateUrl:'assets/partials/schoolsAndRegions.html',
-                controller:'SchoolController'
-            })
-            //Route for the contact page
-            .when('/questionaires', {
-                templateUrl : 'assets/partials/vragenlijsten.html',
-                controller  : 'VragenlijstController'
-            })
-            .when('/questionaires/nr', {
-                templateUrl:'assets/partials/vragenlijst.html',
-                controller:'VragenController'
-            })
-            .when('/categories', {
-                templateUrl:'assets/partials/category.html',
-                controller:'CategoryController'
-            })             
-            .when('/accountrequests', {
-                templateUrl:'assets/partials/accountRequests.html',
-                controller:'AccountRequestController'
-            });
             
 });
