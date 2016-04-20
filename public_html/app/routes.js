@@ -1,5 +1,5 @@
 //configure our routes
-StemApp.config(function($routeProvider, $sceDelegateProvider) {
+StemApp.config(function($routeProvider) {
     $routeProvider
             //Route voor de componenten pagina
             .when('/', {

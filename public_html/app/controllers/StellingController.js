@@ -1,9 +1,9 @@
 //create the dashboard controller and inject angulars $scope
-StemApp.controller('StellingController', function($scope, VragenlijstService, $location) {
+StemApp.controller('StellingController', function($scope, VragenlijstService, $routeParams) {
                 
      $scope.construct = function(id)
     {
-        $scope.getQuestionaire(id);
+        $scope.getQuestionaire($routeParams.id);
     };            
                 
     $scope.saveEditIndex = function(index) {
