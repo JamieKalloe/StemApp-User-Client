@@ -57,6 +57,7 @@ button:focus
     font-size: 5em;
     cursor: pointer;
     display: inline-block;
+    padding: 1%;
     -webkit-transition: opacity 150ms ease-out 100ms;
     -moz-transition: opacity 150ms ease-out 100ms;
     -o-transition: opacity 150ms ease-out 100ms;
