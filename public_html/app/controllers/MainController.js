@@ -5,27 +5,11 @@ StemApp.controller('MainController', function($scope, $location) {
         return $location.path() === location;
     };
     
-    $scope.goToDashBoard = function() {
+    $scope.goToHome = function() {
         $location.path('/');
     };
     
-    $scope.goToSchool = function() {
-        $location.path('/schools');
-    };
-    
-    $scope.goToQuestionaires = function() {
-       $location.path('/questionaires');
-    };
-    
-    $scope.goToQuestionaire = function() {
-        $location.path('/questionaires/nr');
-    };
-    
-    $scope.goToAccountRequests = function() {
-        $location.path('/accountrequests');
-    };
-    
-    $scope.goToCategories = function() {
-        $location.path('/categories');
+    $scope.goToVragenlijsten = function() {
+        $location.path('/vragenlijsten');
     };
 });
