@@ -1,20 +1,18 @@
 <section>
-    <section class="panel-body">
-        <ul class="card_list">   
-            <li class="card card_list_item card-gemeenteraad text-white">
-                <section>
-                    <h1>{{currentStelling.titel}}</h1>
+    <section class="content-area">
+        <section class="content-wrapper background-purple">
+            <hgroup>
+                <h1 class="header1">{{currentStelling.titel}}</h1>
+                <h2 class="header2">{{currentStelling.stelling}}</h2>
+                <h3>{{currentStelling.uitleg}}</h3>
+            </hgroup>
 
-                    <article>
-                        <h2>{{currentStelling.stelling}}</h2>
-                        <h3>{{currentStelling.uitleg}}</h3>
-                        
-                        <button ng-click="next()" type="button" class="button answer pink"><i class="fa fa-times" aria-hidden="true"></i> oneens</button>
-                        <button ng-click="next()" type="button" class="button answer blue"><i class="fa fa-check" aria-hidden="true"></i> eens</button>
-            
-                    </article>
+                <section class="button-group">
+                    <button ng-click="next()" type="button" class="button answer pink left fluid"><i class="fa fa-times" aria-hidden="true"></i> oneens</button>
+                    <button ng-click="next()" type="button" class="button answer blue right fluid"><i class="fa fa-check" aria-hidden="true"></i> eens</button>
                 </section>
-            </li>
-        </ul>
+            <button ng-click="next()" type="button" class="button-transparent fluid">geef me meer uitleg</button>
+            <p class="header1 text-center">{{position + 1}} van de {{selected_questionaire.stellingen.length}}</p>
+        </section>
     </section>
 </section>

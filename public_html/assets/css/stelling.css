@@ -1,0 +1,79 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20-apr-2016, 21:25:22
+    Author     : Jamie
+*/
+@font-face
+{
+    font-family: oswald-light;
+    src: url(../font/Oswald/Oswald-Light.ttf);
+}
+.background-purple
+{
+    background: #522871;
+}
+
+.content-area
+{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.content-wrapper
+{
+    padding: 5%;
+    height: 80vh;
+
+}
+
+.header1
+{
+    color: #fff;
+    font-family: oswald-regular;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+.header2
+{
+    color: #fff;
+    font-family: oswald-light;
+    font-weight: lighter;
+}
+
+.button-group
+{
+    display: inline-flex;
+    width: 100%;
+}
+
+.right
+{
+    float: right;
+}
+
+.left
+{
+    float: left;
+}
+
+.fluid
+{
+    width: 100%;
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+.menu-icon
+{
+    font-size: 3em;
+    vertical-align: baseline;
+}
