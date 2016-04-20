@@ -7,8 +7,9 @@ StemApp.config(function($routeProvider, $sceDelegateProvider) {
                 controller:'MainController'
             })
             //Route voor de vragenlijsten pagina
-            .when('/vragenlijsten', {
-                templateUrl:'assets/partials/vragenlijsten.html',
+            .when('/vragenlijsten:id', {
+                templateUrl:'assets/partials/stellingen.html',
                 controller:'VragenlijstController'
             })
+            .when(/vragenlijsten)
 });
