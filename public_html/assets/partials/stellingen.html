@@ -1,11 +1,12 @@
 <section>
     <section class="panel-body">
-        <ul class="card_list">                  
-            <li class="card card_list_item card-gemeenteraad text-white" ng-repeat="questionaire in questionaires">
+        <ul class="card_list">   
+            <li class="card card_list_item card-gemeenteraad text-white" ng-repeat="stelling in selected_questionaire.stellingen">
                 <section>
-                    <h1>{{questionaire.naam}}</h1>
+                    <h1>{{stelling.titel}}</h1>
+
                     <article>
-                        <h2>Korte omschrijving van de vragenlijst</h2>
+                        <h2>Korte omschrijving van de vragenlijsdcdsfdsst</h2>
                         <!--<h3>{{questionaire.categorie.name}}</h3> Je zit al in een categorie-->
                         <h3>De deadline voor deze vragenlijst staat op: {{questionaire.studentEindDatum}}</h3>
                     </article>

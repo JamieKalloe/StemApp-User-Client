@@ -12,4 +12,8 @@ StemApp.controller('MainController', function($scope, $location) {
     $scope.goToVragenlijsten = function() {
         $location.path('/vragenlijsten');
     };
+    
+    $scope.goToStellingen = function(id) {
+        $location.path('/vragenlijsten' + '/' + id);
+    };
 });

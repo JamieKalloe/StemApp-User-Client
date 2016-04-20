@@ -11,4 +11,14 @@ StemApp.service('VragenlijstService', function($http)
             alert('Ophalen mislukt: ' + message);
         });
     };
+    
+     self.get = function(id, onReceived)
+    {
+        var uri = 'http://localhost:8080/api/vragenlijsten' + '/' + id;
+        
+        $http.get(uri).success(onReceived).error(function(message, status)
+        {
+            alert('Ophalen mislukt: ' + message);
+        });
+    };
 });

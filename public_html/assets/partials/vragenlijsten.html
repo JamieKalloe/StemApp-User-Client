@@ -1,7 +1,7 @@
 <section>
     <section class="panel-body">
         <ul class="card_list">                  
-            <li class="card card_list_item card-gemeenteraad text-white" ng-repeat="questionaire in questionaires">
+            <li class="card card_list_item card-gemeenteraad text-white" ng-repeat="questionaire in questionaires" ng-click="goToStellingen(questionaire.id)">
                 <section>
                     <h1>{{questionaire.naam}}</h1>
                     <article>
