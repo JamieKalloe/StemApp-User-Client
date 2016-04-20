@@ -12,15 +12,17 @@ and open the template in the editor.
     
         <!--css-->     
         <link href="assets/css/components.css" rel="stylesheet">
-        <link href="assets/css/component.css" rel="stylesheet">
-        <link href="assets/css/components-right.css" rel="stylesheet">
-        <link href="assets/css/demo.css" rel="stylesheet">
         <link href="assets/css/normalize.css" rel="stylesheet">
+        <link href="assets/css/demo.css" rel="stylesheet">
+        <link href="assets/css/component.css" rel="stylesheet">
+        <!--<link href="assets/css/components-right.css" rel="stylesheet">-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">        
         
         <!--javascript-->
         <script src="assets/libraries/angular.min.js"></script>
         <script src="assets/libraries/angular-route.min.js"></script>
+        <script src="assets/libraries/modernizr.custom.js"></script>
+        
         
         <!-- Modules -->
         <script src="app/module.js"></script>
@@ -64,10 +66,46 @@ and open the template in the editor.
         </div>
 </nav>-->
         
-        <section class="flex-container">
-            <article class="flex-view" ng-view></article>
-        </section>
-        
+    <div id="st-container" class="st-container">
+			<!--
+				example menus
+				these menus will be on top of the push wrapper
+			-->
+			<nav class="st-menu st-effect-11" id="menu-11">
+				<h2>StemApp</h2>
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">UITSLAGEN</a></li>
+					<li><a href="#">UITLEG</a></li>
+					<li><a href="#">CONTACT</a></li>
+					<li><a href="#">UITLOGGEN</a></li>
+				</ul>
+
+				<section class="nav-footer">
+					<p>Deze app is gemaakt door <b>Fzes</b></p>
+				</section>
+			</nav>
+
+			<!-- content push wrapper -->
+			<div class="st-pusher">
+
+				<div class="st-content"><!-- this is the wrapper for the content -->
+					<div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+						<!-- Top Navigation -->
+						<section class="nav-bar">
+							<section class="hamburger-icon">
+								<div id="st-trigger-effects">
+									<button data-effect="st-effect-11">MENU</button>
+								</div>
+							</section>
+						</section>
+						<article class="flex-view" ng-view></article>
+					</div><!-- /st-content-inner -->
+				</div><!-- /st-content -->
+			</div><!-- /st-pusher -->
+		</div><!-- /st-container -->
+        <script src="assets/libraries/classie.js"></script>
+        <script src="assets/libraries/sidebarEffects.js"></script>
         
         
        
