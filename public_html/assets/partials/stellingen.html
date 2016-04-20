@@ -1,14 +1,17 @@
 <section>
     <section class="panel-body">
         <ul class="card_list">   
-            <li class="card card_list_item card-gemeenteraad text-white" ng-repeat="stelling in selected_questionaire.stellingen">
+            <li class="card card_list_item card-gemeenteraad text-white">
                 <section>
-                    <h1>{{stelling.titel}}</h1>
+                    <h1>{{currentStelling.titel}}</h1>
 
                     <article>
-                        <h2>Korte omschrijving van de vragenlijsdcdsfdsst</h2>
-                        <!--<h3>{{questionaire.categorie.name}}</h3> Je zit al in een categorie-->
-                        <h3>De deadline voor deze vragenlijst staat op: {{questionaire.studentEindDatum}}</h3>
+                        <h2>{{currentStelling.stelling}}</h2>
+                        <h3>{{currentStelling.uitleg}}</h3>
+                        
+                        <button ng-click="next()" type="button" class="button answer pink"><i class="fa fa-times" aria-hidden="true"></i> oneens</button>
+                        <button ng-click="next()" type="button" class="button answer blue"><i class="fa fa-check" aria-hidden="true"></i> eens</button>
+            
                     </article>
                 </section>
             </li>
